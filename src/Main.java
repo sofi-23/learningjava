@@ -1,46 +1,42 @@
 public class Main {
     public static void main(String[] args) {
-        int numeroIf = -1;
-        if (numeroIf > 0) {
-            System.out.println("POSITIVO");
-        } else if (numeroIf < 0) {
-            System.out.println("NEGATIVO");
-        }else {
-            System.out.println("CERO");
+         class Persona {
+            private String nombre;
+            private String telefono;
+            private int edad;
+
+            public void setEdad(int edad) {
+                this.edad = edad;
+            }
+             public void setNombre(String nombre) {
+                 this.nombre = nombre;
+             }
+             public void setTelefono(String telefono) {
+                 this.telefono = telefono;
+             }
+
+             public int getEdad() {
+                return this.edad;
+             }
+             public String getNombre() {
+                 return this.nombre;
+             }
+             public String getTelefono() {
+                 return this.telefono;
+             }
+
         }
 
-        int numeroWhile = 0;
+        Persona Persona1 = new Persona();
 
-        while(numeroWhile < 3) {
-            System.out.println(numeroWhile);
-            numeroWhile++;
-        }
-        do {
-            System.out.println(numeroWhile);
-        }while(numeroWhile == 5);
+         Persona1.setEdad(20);
+         Persona1.setNombre("Pedro");
+         Persona1.setTelefono("12238739");
+
+         System.out.println(Persona1.getEdad());
+         System.out.println(Persona1.getNombre());
+         System.out.println(Persona1.getTelefono());
 
 
-        /*for (int numeroFor = 0; numeroFor >= 0; numeroFor++) {
-            numeroFor ++;
-            System.out.println("Numero FOR " + numeroFor);
-        }*/
-
-        String estacion = "Invierno";
-
-        switch(estacion) {
-            case "Verano":
-                System.out.println("Verano");
-                break;
-                case "Invierno":
-                    System.out.println("Invierno");
-                    break;
-            case "Otoño":
-                System.out.println("Otoño");
-                break;
-            case "Primavera":
-                System.out.println("Primavera");
-            default:
-                System.out.println("No valida");
-        }
 }
 }
